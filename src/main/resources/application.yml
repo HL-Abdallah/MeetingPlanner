@@ -1,0 +1,28 @@
+spring:
+  thymeleaf:
+    cache: false
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+  datasource:
+    url: jdbc:postgresql://localhost:5432/meeting_planner
+    username: postgres
+    password: root
+
+server:
+  port: 8082
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-exception: true
+
+logging:
+  level:
+    com.example.meetingplanner: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.hibernate.sql: DEBUG
